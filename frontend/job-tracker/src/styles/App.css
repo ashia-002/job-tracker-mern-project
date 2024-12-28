@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofadi+One&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px; /* 1 rem = 16px */
+    scroll-behavior: smooth;
+  }
+
+  header{
+    background-color: transparent;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF; /* Default background color */
+    color: #212121; /* Default text color */
+    line-height: 1.6;
+  }
+  
+  /* Font Definitions */
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 4rem; /* 64px */
+    color: #212121;
+  }
+  
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2.125rem; /* 34px */
+    color: #212121;
+  }
+  
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem; /* 20px */
+    color: #212121;
+  }
+
+  .job-links a, .table-link a {
+    display: inline-block;
+    transform: translateY(0); /* Default state */
+    transition: transform 0.3s ease-in-out; /* Smooth effect */
+  }
+
+  .job-links a:hover , .table-link a:hover {
+    transform: translateY(-5px); /* Lift on hover */
+  }
+
+  
+  .theme-heading-1 {
+    font-family: 'Sofadi One', cursive;
+    font-size: 4rem; /* 64px */
+    color: #9EF01A;
+  }
+  
+  .theme-heading-2 {
+    font-family: 'Sofadi One', cursive;
+    font-size: 2.125rem; /* 34px */
+    color: #9EF01A;
+  }
+  
+  p, body-text {
+    font-family: 'Poppins', sans-serif;
+    color: #3C3C3C;
+  }
+  
+  button {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem; /* 18px */
+    font-weight: 500;
+    color: black;
+    background-color: #70E000;
+    padding: 0.5rem 1rem;
+    border: 2px solid #073B3A;
+    border-radius: 0.5rem; /* 8px */
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #E0D820;
+  }
+
+  /**? Selector style*/
+  select.custom-select option {
+    background-color: #EAEAEA; /* Your desired selection color */
+    color: #333; /* Text color for better readability */
+}
+select.custom-select {
+    background-color: white; /* Dropdown background */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+select.custom-select:focus option:hover{
+  background-color: var(--favorite-accent-color);
+}
+
+/* Customizing when an option is selected */
+select.custom-select:focus option:checked {
+  background-color: var(--favorite-accent-color);
+  color: var(--white);
+}
+
+select.custom-select:focus{
+  border-color: var(--favorite-accent-color);
+    outline: none;
+}
+
+
+  
+  /* Card Styles */
+  .card {
+    background-color: #F1FCE5;
+    border-radius: 0.75rem; /* 12px */
+    padding: 1.5rem; /* 24px */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #212121;
+  }
+  
+  .card-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem; /* 24px */
+    color: #212121;
+  }
+  
+  .card-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* 16px */
+    color: #3C3C3C;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #C6F399;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ul.li:hover{
+    color: #073B3A;
+    font-weight: 500;
+  }
+  
+  .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* 16px */
+    color: #212121;
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #70E000;
+  }
+  
+  /* Tracker Table */
+  .table-auto {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    display: block; /* Ensure the table can scroll horizontally */
+    max-width: 100%; /* Prevent table from exceeding container width */
+    white-space: nowrap; /* Prevent text wrapping inside cells */
+  }
+  
+  /* Scrollbar Styling */
+  .table-auto::-webkit-scrollbar {
+    height: 8px; /* Set scrollbar height for horizontal scrolling */
+    background: var(--table-bg-color); /* Background color of the scrollbar */
+  }
+  
+  .table-auto::-webkit-scrollbar-thumb {
+    background: var(--favorite-accent-color); /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded edges for the scrollbar thumb */
+  }
+  
+  /* Styling for Table Headers and Cells */
+  th, td {
+    border: 1px solid var(--favorite-accent-color);
+    text-align: left;
+    padding: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /* Change font size to 14px */
+  }
+  
+  th {
+    background-color: var(--table-bg-color);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /* Change font size to 14px */
+  }
+  
+  /* Input Fields */
+  input {
+    border: none;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    padding: 4px;
+  }
+  
+  input.search{
+    border: 1px solid var(--text-secondary-01-color);
+    background-color: #F9F9F9;
+    border-radius: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+  }
+
+
+  
+  /* Footer */
+  .footer {
+    background-color: #073B3A;
+    padding: 2rem;
+    color: #FFFFFF;
+  }
+  
+  .footer-heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 1rem;
+  }
+  
+  .footer-link {
+    font-family: 'Assistant', sans-serif;
+    font-size: 0.875rem; /* 14px */
+    color: #F2F230;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    color: #9EF01A;
+  }
+  
+  /* Colors Used in the Project */
+  :root {
+    --primary-button-color: #70E000;
+    --hover-button-color: #E0D820;
+    --text-theme-color: #9EF01A;
+    --navbar-bg-color: #C6F399;
+    --table-bg-color: #E2F9CC;
+    --card-bg-color: #F1FCE5;
+  
+    --favorite-accent-color: #073B3A;
+    --favorite-accent-color-02: #F2F230;
+  
+    --text-primary-color: #212121;
+    --text-secondary-01-color: #757575;
+    --text-secondary-02-color: #3C3C3C;
+  
+    --white: #FFFFFF;
+    --pure-black: #000000;
+  }
+  
