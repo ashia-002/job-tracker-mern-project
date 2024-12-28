@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "title": "Frontend Developer",
+      "jobType": "Full-time",
+      "deadline": "2024-12-15",
+      "body": "Join our team to build amazing user interfaces using ReactJS and Tailwind CSS.",
+      "link": "https://example.com/frontend-developer",
+      "favorite": true
+    },
+    {
+      "id": 2,
+      "title": "Backend Engineer",
+      "jobType": "Part-time",
+      "deadline": "2024-12-10",
+      "body": "Work on building robust server-side logic using Node.js and Express.",
+      "link": "https://example.com/backend-engineer",
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Designer",
+      "jobType": "Contract",
+      "deadline": "2024-12-20",
+      "body": "Design intuitive and user-friendly interfaces for web and mobile applications.",
+      "link": "https://example.com/ui-ux-designer",
+      "favorite": true
+    },
+    {
+      "id": 4,
+      "title": "Data Analyst",
+      "jobType": "Freelance",
+      "deadline": "2024-12-18",
+      "body": "Analyze and interpret complex data to help make informed business decisions.",
+      "link": "https://example.com/data-analyst",
+      "favorite": false
+    },
+    {
+      "id": 5,
+      "title": "Product Manager",
+      "jobType": "Full-time",
+      "deadline": "2024-12-22",
+      "body": "Lead product development teams and ensure the delivery of high-quality software.",
+      "link": "https://example.com/product-manager",
+      "favorite": true
+    },
+    {
+      "id": 6,
+      "title": "Digital Marketing Specialist",
+      "jobType": "Internship",
+      "deadline": "2024-12-12",
+      "body": "Develop and execute effective digital marketing campaigns across various platforms.",
+      "link": "https://example.com/digital-marketing-specialist",
+      "favorite": false
+    },
+    {
+      "id": 7,
+      "title": "DevOps Engineer",
+      "jobType": "Remote",
+      "deadline": "2024-12-25",
+      "body": "Optimize infrastructure and CI/CD pipelines to streamline development processes.",
+      "link": "https://example.com/devops-engineer",
+      "favorite": true
+    }
+  ]
+  
