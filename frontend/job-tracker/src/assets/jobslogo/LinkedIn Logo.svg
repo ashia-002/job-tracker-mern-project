@@ -1,0 +1,23 @@
+<svg width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="LinkedIn Logo" filter="url(#filter0_d_50_718)">
+<path d="M148 72C148 111.765 115.765 144 76 144C36.2355 144 4 111.765 4 72C4 32.2355 36.2355 0 76 0C115.765 0 148 32.2355 148 72Z" fill="url(#paint0_linear_50_718)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M78.5734 55.7449V64.2381C80.3677 61.5289 82.8409 59.3278 85.7509 57.8505C88.6609 56.3731 91.908 55.6699 95.1745 55.8099C112.619 55.8099 116.39 66.6205 116.39 80.6842V109.317H100.234V83.9323C100.234 77.8764 99.0016 70.0888 89.4893 70.0888C80.2648 70.0888 78.6895 76.6803 78.6895 83.4819V109.317H62.5833V55.7449H78.5734ZM51.7634 42.2817C51.7614 43.8683 51.2869 45.419 50.3995 46.7393C49.5121 48.0597 48.2512 49.091 46.775 49.704C45.2993 50.312 43.6745 50.471 42.1074 50.1609C40.5402 49.8507 39.1016 49.0854 37.9746 47.9623C36.8455 46.8385 36.0768 45.4088 35.7651 43.8531C35.4535 42.2974 35.6129 40.6851 36.2232 39.2189C36.8335 37.7527 37.8675 36.4981 39.1952 35.6129C40.5229 34.7277 42.085 34.2514 43.685 34.2439C44.7484 34.2439 45.8014 34.452 46.7835 34.8563C47.7656 35.2606 48.6575 35.8532 49.408 36.5999C50.1585 37.3467 50.753 38.233 51.1571 39.2081C51.5613 40.1831 51.7673 41.2276 51.7634 42.2817Z" fill="white"/>
+<path d="M51.4146 55.7561H35.6098V109.317H51.4146V55.7561Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_50_718" x="0" y="0" width="152" height="152" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_50_718"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_50_718" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_50_718" x1="22" y1="27.2195" x2="130.22" y2="112.171" gradientUnits="userSpaceOnUse">
+<stop stop-color="#68B9FD"/>
+<stop offset="1" stop-color="#004BEB"/>
+</linearGradient>
+</defs>
+</svg>

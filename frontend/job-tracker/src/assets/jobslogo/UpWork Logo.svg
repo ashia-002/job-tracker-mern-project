@@ -1,0 +1,22 @@
+<svg width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="UpWork Logo" filter="url(#filter0_d_50_767)">
+<path d="M148 72C148 111.765 115.765 144 76 144C36.2355 144 4 111.765 4 72C4 32.2355 36.2355 0 76 0C115.765 0 148 32.2355 148 72Z" fill="url(#paint0_linear_50_767)"/>
+<path d="M100.343 76.492C96.2913 76.492 92.4932 74.769 89.0406 71.9649L89.8789 67.995L89.9083 67.8401C90.6694 63.623 93.03 56.5502 100.347 56.5502C102.982 56.5522 105.509 57.6035 107.372 59.4733C109.236 61.3431 110.283 63.8786 110.285 66.5229C110.28 69.1667 109.231 71.7006 107.368 73.5693C105.504 75.438 102.978 76.489 100.343 76.492ZM100.343 46.4594C91.0077 46.4594 83.7607 52.5434 80.8192 62.5678C76.3335 55.8012 72.9214 47.677 70.9396 40.8293H60.8798V67.069C60.8778 69.561 59.8907 71.9504 58.1349 73.7129C56.3792 75.4754 53.9984 76.4669 51.5149 76.4698C49.0327 76.4649 46.6537 75.4726 44.8996 73.7103C43.1455 71.9481 42.1593 69.5597 42.1574 67.069V40.8293H32.0976V67.069C32.0976 77.8202 40.8116 86.6344 51.5149 86.6344C62.2255 86.6344 70.9396 77.8202 70.9396 67.069V62.6785C72.8846 66.7627 75.2856 70.9024 78.1976 74.5623L72.0463 103.61H82.3304L86.7904 82.5427C90.6989 85.0479 95.192 86.6344 100.343 86.6344C111.374 86.6344 120.341 77.5877 120.341 66.5266C120.341 55.4581 111.374 46.4594 100.343 46.4594Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_50_767" x="0" y="0" width="152" height="152" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_50_767"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_50_767" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_50_767" x1="30.561" y1="21.5122" x2="117.927" y2="129.512" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9EF01A"/>
+<stop offset="1" stop-color="#15A800"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="GoogleJobs Logo" filter="url(#filter0_d_50_695)">
+<path d="M148 72C148 111.765 115.765 144 76 144C36.2355 144 4 111.765 4 72C4 32.2355 36.2355 0 76 0C115.765 0 148 32.2355 148 72Z" fill="url(#paint0_linear_50_695)"/>
+<path d="M28.3968 57.1173C31.1562 51.6267 35.3877 47.0112 40.6189 43.786C45.85 40.5609 51.8748 38.8532 58.0204 38.8537C66.9545 38.8537 74.4599 42.1385 80.1983 47.4883L70.6939 56.9947C67.2562 53.7099 62.8869 52.036 58.0204 52.036C49.3846 52.036 42.0748 57.8697 39.4725 65.7022C38.8095 67.691 38.4316 69.8123 38.4316 72C38.4316 74.1877 38.8095 76.309 39.4725 78.2978C42.0782 86.1336 49.3846 91.9641 58.0204 91.9641C62.4792 91.9641 66.2749 90.7874 69.2453 88.7986C70.9672 87.665 72.4414 86.194 73.5787 84.4746C74.716 82.7552 75.4928 80.8231 75.8622 78.795H58.0204V65.974H89.2418C89.633 68.1418 89.8452 70.4023 89.8452 72.7524C89.8452 82.8488 86.2317 91.3475 79.9596 97.115C74.4765 102.18 66.9711 105.146 58.0204 105.146C53.6665 105.148 49.3549 104.292 45.3321 102.627C41.3092 100.962 37.654 98.5202 34.5753 95.4419C31.4966 92.3636 29.0548 88.7089 27.3895 84.6866C25.7241 80.6643 24.8678 76.3533 24.8696 72C24.8696 66.6502 26.1492 61.5921 28.3968 57.1173Z" fill="white"/>
+<path d="M112.777 69.6878V54.6585H117.401V69.6878H132.431V74.3122H117.401V89.3415H112.777V74.3122H97.7476V69.6878H112.777Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_50_695" x="0" y="0" width="152" height="152" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_50_695"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_50_695" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_50_695" x1="19.2348" y1="35.4783" x2="123.583" y2="122.922" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF3576"/>
+<stop offset="1" stop-color="#D6073B"/>
+</linearGradient>
+</defs>
+</svg>
