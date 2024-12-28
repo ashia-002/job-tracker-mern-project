@@ -1,3 +1,5 @@
+// This JSON file contains dummy data for testing the frontend display.
+// Replace or remove this data when integrating with the backend.
 [
     {
       "id": 1,
