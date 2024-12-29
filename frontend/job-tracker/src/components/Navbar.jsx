@@ -56,9 +56,13 @@ const Navbar = () => {
                             </Link>
                         </li>
                         {/* Button for Login */}
+                        <button className="reg-btn border-favoriteAccentColor border-solid">
+                            <Link to="/registrationPage">Registration</Link>
+                        </button>
                         <button className="border-favoriteAccentColor border-solid">
                             <Link to="/loginPage">Login</Link>
                         </button>
+                        
                     </ul>
                 </div>
             </nav>
