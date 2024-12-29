@@ -1,8 +1,8 @@
-import googlelogo from '../assets/GoogleJobs Logo.svg'
-import linkedinlogo from '../assets/LinkedIn Logo.svg'
-import indeedlogo from '../assets/Indeed Logo.svg'
-import glassdoorlogo from "../assets/GlassDoor Logo.svg";
-import upworklogo from '../assets/UpWork Logo.svg'
+import googlelogo from '../assets/jobslogo/GoogleJobs Logo.svg'
+import linkedinlogo from '../assets/jobslogo/LinkedIn Logo.svg'
+import indeedlogo from '../assets/jobslogo/Indeed Logo.svg'
+import glassdoorlogo from "../assets/jobslogo/GlassDoor Logo.svg";
+import upworklogo from '../assets/jobslogo/UpWork Logo.svg'
 const ExploreSection = () => {
     return (
         <section className=" text-center py-20 px-28">
