@@ -5,6 +5,7 @@ import Explored from "../pages/Explored";
 import Bookmarked from "../pages/Bookmarked";
 import Tracker from "../pages/Tracker";
 import Login from "../pages/Login";
+import Registration from "../pages/Registration";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/registrationPage",
-                element: <div>registrationPage</div>
+                element: <Registration/>
             }
         ]    
     }
