@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Explored from "../pages/Explored";
 import Bookmarked from "../pages/Bookmarked";
 import Tracker from "../pages/Tracker";
+import Login from "../pages/Login";
 
 const router = createBrowserRouter([
     {
@@ -32,9 +33,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "/loginPage",
-                element: <div>User Login</div>
+                element: <Login/>
+            },
+            {
+                path: "/registrationPage",
+                element: <div>registrationPage</div>
             }
-        ]
+        ]    
     }
 ]);
 
