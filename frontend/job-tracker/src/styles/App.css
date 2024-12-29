@@ -89,6 +89,11 @@
     background-color: #E0D820;
   }
 
+  .reg-btn {
+    background-color: transparent;
+  }
+  
+
   /**? Selector style*/
   select.custom-select option {
     background-color: #EAEAEA; /* Your desired selection color */
