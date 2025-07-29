@@ -39,7 +39,7 @@ job-tracker-mern/
 ├── .env
 ├── package.json
 └── README.md
-
+```
 ## 🧪 Future Improvements
 - Email notifications and reminders for upcoming interviews or deadlines
 
