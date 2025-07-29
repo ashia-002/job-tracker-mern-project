@@ -1,7 +1,7 @@
 import illustration from '../assets/AboutSectionillustration02.svg'
 const AboutSection = () => {
     return (
-        <section className="flex justify-center text-left py-16 px-28 gap-6">
+        <section className="flex justify-around text-left py-16 px-28 gap-8">
             <div>
                 <h2 className="text-3xl text-textPrimaryColor mb-4 leading-tight">
                     Streamline Your Job Hunt

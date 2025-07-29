@@ -1,55 +1,79 @@
-import React, { useState } from 'react';
-import loginimage from '../assets/loginImage/loginimage.png';
-import googleicon from '../assets/loginImage/google.svg';
+import React, { useState } from "react";
+import loginimage from "../assets/loginImage/loginimage.png";
+import api from "../api/api"; // Import your axios instance
+import Cookies from "js-cookie"; // Import js-cookie to handle cookies
+import { useNavigate } from "react-router-dom"; // Import useNavigate to handle redirection
+import { useOutletContext } from "react-router-dom"; // Import to access context
+import { toast, ToastContainer } from 'react-toastify'; // Importing toast from react-toastify
+import 'react-toastify/dist/ReactToastify.css'; // Importing the styles for the toast
 
-export const Login = () => {
+const Login = () => {
+    const { setIsLoggedIn } = useOutletContext(); // Access setIsLoggedIn from context
     const [message, setMessage] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate(); // Initialize navigate hook
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent form submission
-
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
         if (!email || !password) {
-            setMessage("Email and Password fields cannot be empty.");
+            // setMessage("Email and Password fields cannot be empty.");
+            toast.error("Email and Password fields cannot be empty.");
         } else {
-            setMessage(""); // Clear error message
-            // Proceed with login logic (e.g., API call)
-            console.log("Logging in with", { email, password });
+            // setMessage(""); // Clear error message
+    
+            try {
+                const response = await api.post("/api/user/login", { email, password });
+    
+                // Log the response for debugging
+                console.log(response.data); // Ensure the response contains `userId` and `token`
+    
+                // Set cookies with proper settings for cross-origin requests
+                // Ensure userId and token are being correctly set
+                Cookies.set("userId", response.data.userId, { 
+                    expires: 7, 
+                    path: '/', 
+                    sameSite: 'Lax', 
+                    secure: false // Use false for local testing without HTTPS
+                });
+                Cookies.set("token", response.data.token, { 
+                    expires: 7, 
+                    path: '/', 
+                    sameSite: 'None', 
+                    secure: false // Use false for local testing without HTTPS
+                });
+    
+                // Log to verify that cookies are set
+                console.log("UserId from cookies after setting:", Cookies.get("userId"));
+                console.log("Token from cookies after setting:", Cookies.get("token"));
+    
+                // setMessage("Login successful!");
+                toast.success("Login successful!");
+                setIsLoggedIn(true); // Update the login state after successful login
+    
+                // Wait for a brief period before navigating
+                setTimeout(() => {
+                    navigate("/"); // Redirect to homepage after login
+                }, 800);
+    
+            } catch (error) {
+                console.error("Login failed:", error); // Log the entire error to console for debugging
+                // setMessage(error.response?.data?.message || "Login failed. Please try again.");
+                toast.error(error.response?.data?.message || "Login failed. Please try again.");
+            }
         }
     };
-
+        
     return (
         <section className="flex justify-center text-left py-16 px-28 gap-6">
             <div className="w-1/2">
-                <div>
-                    <h2 className="text-xl text-textThemeColor font-themeFont">
-                        Welcome Back.
-                    </h2>
-                    <h2 className="text-3xl text-textPrimaryColor mb-4 leading-tight">
-                        Continue to your Account.
-                    </h2>
-                </div>
-                {/* Google Login Button */}
-                <button className="w-full max-w-xs text-md text-textSecondary01Color bg-blue-100 border border-gray-300 flex items-center justify-center gap-2 py-2 rounded-md shadow-md hover:bg-blue-200 transition-all mb-4">
-                    <img src={googleicon} alt="Google Logo" className="h-5" />
-                    Log In with Google
-                </button>
+                <h2 className="text-xl text-textThemeColor font-themeFont">Welcome Back.</h2>
+                <h2 className="text-3xl text-textPrimaryColor mb-4 leading-tight">Continue to your Account.</h2>
 
-                {/* Separator */}
-                <div className="flex items-center w-full max-w-xs mb-4">
-                    <hr className="flex-grow border-gray-300" />
-                    <span className="px-2 text-gray-500 text-sm">Or use Email</span>
-                    <hr className="flex-grow border-gray-300" />
-                </div>
-
-                {/* Login Form */}
                 <form className="w-full max-w-xs flex flex-col gap-4" onSubmit={handleSubmit}>
-                    {/* Email Input */}
                     <div className="w-full">
-                        <label htmlFor="email" className="text-sm text-gray-500">
-                            EMAIL
-                        </label>
+                        <label htmlFor="email" className="text-sm text-gray-500">EMAIL</label>
                         <input
                             type="email"
                             name="email"
@@ -60,60 +84,38 @@ export const Login = () => {
                             className="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-2 mt-1 focus:outline-none focus:border-green-500"
                         />
                     </div>
-
-                    {/* Password Input */}
                     <div className="w-full">
-                        <label htmlFor="password" className="text-sm text-gray-500">
-                            PASSWORD
-                        </label>
-                        <div className="relative">
-                            <input
-                                type="password"
-                                id="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="••••••••••"
-                                className="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-2 mt-1 focus:outline-none focus:border-green-500"
-                            />
-                            <span className="absolute right-3 top-3 cursor-pointer text-gray-400 hover:text-black">
-                                👁️
-                            </span>
-                        </div>
+                        <label htmlFor="password" className="text-sm text-gray-500">PASSWORD</label>
+                        <input
+                            type="password"
+                            id="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="••••••••••"
+                            className="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-2 mt-1 focus:outline-none focus:border-green-500"
+                        />
                     </div>
-
-                    {/* Error Message */}
                     {message && <p className="text-red-500 text-sm italic mb-3">{message}</p>}
-
-                    {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full text-white font-bold py-2 rounded-md "
+                        className="w-full text-white font-bold py-2 rounded-md bg-primaryButtonColor hover:bg-hoverButtonColor"
                     >
                         CONTINUE →
                     </button>
                 </form>
-
                 {/* Footer Section */}
                 <p className="text-gray-500 text-sm mt-6">
-                    Are you a Newbie?{' '}
-                    <a
-                        href="/registrationPage"
-                        className="text-favoriteAccentColor font-bold hover:underline"
-                    >
-                        GET STARTED – IT’S FREE
+                    Don't have an account?{" "}
+                    <a href="/registrationPage" className="text-favoriteAccentColor font-bold hover:underline">
+                        REGISTER NOW
                     </a>
                 </p>
             </div>
-
-            {/* Right Section (Image) */}
             <div className="flex-shrink-0 max-w-96">
-                <img
-                    src={loginimage}
-                    alt="A person sitting at a desk using a laptop for job hunting"
-                    className="max-w-full h-auto"
-                    loading="lazy"
-                />
+                <img src={loginimage} alt="Login illustration" className="max-w-full h-auto" />
             </div>
+            {/* Toast container should be placed at the bottom of your component tree */}
+            <ToastContainer />
         </section>
     );
 };

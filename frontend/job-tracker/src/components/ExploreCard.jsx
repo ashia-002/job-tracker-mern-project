@@ -36,9 +36,9 @@ const ExploreCard = ({ filterCategory, filterValue, toggleBookmark, bookmarkedJo
     };
 
     return (
-        <div className='w-[812px] mx-auto'>
+        <div className='w-full sm:w-[812px] lg:w-[1200px] mx-auto'>
             <h2 className="text-left text-lg mb-4">Jobs card:</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {filteredCards.map((card, index) => (
                     <div
                         key={index}

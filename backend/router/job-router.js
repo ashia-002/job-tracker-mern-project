@@ -1,54 +1,25 @@
 const express = require("express");
-const job = require("../models/job-model");
 const jobrouter = express.Router();
+const {getAllJobs, saveNewJob, updateJob, deleteJob} = require("../controllers/job-controller");
+const jobSchema = require("../validators/job-validation");
+const validateJob = require("../middlewares/jobValidate-middleware");
+const authentication = require("../middlewares/authentication");
 
 //To get all the jobs
-jobrouter.get("/", async (req, res) => {
-    try {
-        const jobs = await job.find();
-        res.json(jobs);
-    } catch (error) {
-        res.status(500).json({msg: "Error fetching jobs."});
-    }
-});
-
+jobrouter.route("/").get(authentication, getAllJobs);
+ 
 
 //To save a new job
-jobrouter.post("/", async (req, res) => {
-    try {
-       const newJob = new job(req.body);
-       const savedJob = await newJob.save();
-       res.status(201).json({msg: "job added successfully!", job: savedJob}) 
-    } catch (error) {
-        res.status(400).json({msg: "Error adding jobs."});
-    }
-});
+// jobrouter.route("/").post(authentication, validateJob(jobSchema), saveNewJob);
+jobrouter.route("/").post( authentication, saveNewJob);
 
 //Update a job
-jobrouter.put("/:id", async (req, res) => {
-    try {
-        const updatedJob = await job.findByIdAndUpdate(req.params.id, req.body, {
-            new: true,
-        });
+// jobrouter.route("/:id").put(authentication, validateJob(jobSchema), updateJob);
+jobrouter.route("/:id").put( authentication, updateJob);
 
-        if(!updatedJob){
-            return res.status(400).json({msg: "Job not found."});
-        }
-    } catch (error) {
-        
-    }
-});
+// jobrouter.route("/:id").get(getJob);
 
-jobrouter.delete("/:id", async (req, res) =>{
-    try {
-        const deletedJob = await Job.findByIdAndDelete(req.params.id);
-        if (!deletedJob) {
-            return res.status(404).json({ error: "Job not found" });
-        }
-        res.json({ message: `Job with id: ${req.params.id} deleted successfully!` });
-    } catch (error) {
-        res.status(500).json({ error: "Error deleting job" });
-    }
-});
+//Delete a job
+jobrouter.route("/:id").delete(authentication, deleteJob);
 
 module.exports = jobrouter;

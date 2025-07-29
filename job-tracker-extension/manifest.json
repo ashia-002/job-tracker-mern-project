@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Job Scraper Extension",
+  "version": "1.0",
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "https://www.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "MainLogoTab16.png",
+      "48": "MainLogoTab48.png",
+      "128": "MainLogoTab128.png"
+    }
+  },
+  "icons": {
+    "16": "MainLogoTab16.png",
+    "48": "MainLogoTab48.png",
+    "128": "MainLogoTab128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*",
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

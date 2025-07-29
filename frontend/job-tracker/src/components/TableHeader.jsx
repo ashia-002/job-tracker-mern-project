@@ -75,6 +75,12 @@ const TableHeader = () => {
                                     <span className="overflow-hidden text-ellipsis whitespace-nowrap">Link</span>
                                 </div>
                             </th>
+                            <th className="border px-4 py-2">
+                                <div className="flex items-center">
+                                    {/*<img src={linkIcon} alt="Icon" className="w-6 h-6" />*/}
+                                    <span className="overflow-hidden text-ellipsis whitespace-nowrap">Buttons</span>
+                                </div>
+                            </th>
                         </tr>
                     </thead>
     );
